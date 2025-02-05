@@ -1,0 +1,36 @@
+@startuml
+
+class student {
+    - String name
+    - int id
+    - int age
+    - double grade
+    - String email
+    + student(String, int, int, double, String)
+    + String getName()
+    + void setName(String)
+    + int getId()
+    + void setId(int)
+    + int getAge()
+    + void setAge(int)
+    + double getGrade()
+    + void setGrade(double)
+    + String getEmail()
+    + void setEmail(String)
+}
+
+class studentCheck {
+    + void showDetails(student)
+    + void updateGrade(student, double)
+    + boolean isEligibleForGraduation(student)
+}
+
+class Main {
+    + static void main(String[])
+}
+
+studentCheck --> student : uses
+Main --> student : creates
+Main --> studentCheck : uses
+
+@enduml
