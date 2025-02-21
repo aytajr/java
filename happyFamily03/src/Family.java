@@ -143,7 +143,7 @@ public class Family {
     }
 
     @Override
-    @Deprecated
+    @Deprecated(since = "9")
     @SuppressWarnings("deprecation")
     protected void finalize() throws Throwable {
         System.out.println("Family object with mother " + mother.getName() + " and father " + father.getName() + " is being garbage collected.");
