@@ -11,7 +11,7 @@ public class Pet {
         System.out.println("Class Pet is being loaded.");
     }
 
-    // Non-static initialization block
+    // non-static
     {
         System.out.println("A new Pet object is being created.");
     }
