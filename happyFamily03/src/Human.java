@@ -143,7 +143,7 @@ public class Human {
     }
 
     @Override
-    @Deprecated
+    @Deprecated(since = "9")
     @SuppressWarnings("deprecation")
     protected void finalize() throws Throwable {
         System.out.println("Human object " + this.name + " " + this.surname + " is being garbage collected.");
