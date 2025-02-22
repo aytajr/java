@@ -95,7 +95,8 @@ public class Pet {
     @Deprecated(since = "9")
     @SuppressWarnings("deprecation")
     protected void finalize() throws Throwable {    // finalize method is deprecated so I tried to suppress warnings about deprecation
-        System.out.println("Pet object " + this.nickname + " is being garbage collected.");
-        super.finalize();
+        throw new UnsupportedOperationException("finalize() method is not supported in this class.");
+        // System.out.println("Pet object " + this.nickname + " is being garbage collected.");
+        // super.finalize();
     }
 }
