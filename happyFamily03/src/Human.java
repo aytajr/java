@@ -146,8 +146,9 @@ public class Human {
     @Deprecated(since = "9")
     @SuppressWarnings("deprecation")
     protected void finalize() throws Throwable {
-        System.out.println("Human object " + this.name + " " + this.surname + " is being garbage collected.");
-        super.finalize();
+        throw new UnsupportedOperationException("finalize() method is not supported in this class.");
+        // System.out.println("Human object " + this.name + " " + this.surname + " is being garbage collected.");
+        // super.finalize();
     }
 
 }
