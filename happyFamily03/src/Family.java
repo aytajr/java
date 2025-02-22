@@ -146,8 +146,9 @@ public class Family {
     @Deprecated(since = "9")
     @SuppressWarnings("deprecation")
     protected void finalize() throws Throwable {
-        System.out.println("Family object with mother " + mother.getName() + " and father " + father.getName() + " is being garbage collected.");
-        super.finalize();
+        throw new UnsupportedOperationException("finalize() method is not supported in this class.");
+        // System.out.println("Family object with mother " + mother.getName() + " and father " + father.getName() + " is being garbage collected.");
+        // super.finalize();
     }
 
 
