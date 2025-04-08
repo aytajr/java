@@ -24,7 +24,6 @@ public class Main {
 
         List<Student> students = new ArrayList<>(Arrays.asList(s1, s2, s3, s4, s5));
         
-        // Create Courses
         for (Student student : students) {
             Course c1 = new Course(UUID.randomUUID().toString(), "Math", t1);
             Course c2 = new Course(UUID.randomUUID().toString(), "Science", t2);
@@ -37,16 +36,13 @@ public class Main {
             courses.add(c1);
             courses.add(c2);
 
-            // Teacher teaches
             t1.teach(c1);
             t2.teach(c2);
 
-            // Exams for each course
             exams.add(new Exam(UUID.randomUUID().toString(), student, c1, new Random().nextInt(101)));
             exams.add(new Exam(UUID.randomUUID().toString(), student, c2, new Random().nextInt(101)));
         }
 
-        // JSON Serialization
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
